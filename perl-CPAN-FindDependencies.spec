@@ -1,6 +1,6 @@
 
 %define realname   CPAN-FindDependencies
-%define version    2.0
+%define version    2.32
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
@@ -48,5 +48,5 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorlib/*
 /usr/bin/cpandeps
-/usr/share/man/man1/cpandeps.1.lzma
+/usr/share/man/man1/*
 
