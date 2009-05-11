@@ -14,6 +14,7 @@ Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
 BuildRequires: perl(Capture::Tiny)
+BuildRequires: perl(Devel::CheckOS)
 BuildRequires: perl(LWP::Simple)
 BuildRequires: perl(Module::CoreList)
 BuildRequires: perl(Parse::CPAN::Packages)
