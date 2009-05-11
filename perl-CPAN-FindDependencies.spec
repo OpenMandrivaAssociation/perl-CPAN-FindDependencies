@@ -19,6 +19,7 @@ BuildRequires: perl(Parse::CPAN::Packages)
 BuildRequires: perl(Scalar::Util)
 BuildRequires: perl(URI::file)
 BuildRequires: perl(YAML)
+BuildRequires: perl(YAML::Tiny)
 
 BuildArch: noarch
 
