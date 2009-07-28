@@ -1,18 +1,16 @@
+%define upstream_name    CPAN-FindDependencies
+%define upstream_version 2.32
 
-%define realname   CPAN-FindDependencies
-%define version    2.32
-%define release    %mkrel 1
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
 Summary:    Object representing a module dependency
-Source:     http://www.cpan.org/modules/by-module/CPAN/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/CPAN/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Capture::Tiny)
 BuildRequires: perl(Devel::CheckOS)
 BuildRequires: perl(LWP::Simple)
@@ -22,14 +20,14 @@ BuildRequires: perl(Scalar::Util)
 BuildRequires: perl(URI::file)
 BuildRequires: perl(YAML)
 BuildRequires: perl(YAML::Tiny)
-
 BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 no description found
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
