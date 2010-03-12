@@ -1,5 +1,5 @@
 %define upstream_name    CPAN-FindDependencies
-%define upstream_version 2.32
+%define upstream_version 2.33
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
