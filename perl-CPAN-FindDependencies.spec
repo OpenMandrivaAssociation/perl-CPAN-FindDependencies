@@ -1,15 +1,15 @@
 %define upstream_name    CPAN-FindDependencies
-%define upstream_version 2.34
+%define upstream_version 2.42
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	Object representing a module dependency
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/CPAN/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/CPAN/CPAN-FindDependencies-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Capture::Tiny)
@@ -40,7 +40,7 @@ make test
 %makeinstall_std
 
 %files
-%doc CHANGES README
+%doc  README
 %perl_vendorlib/*
 %{_bindir}/cpandeps
 %{_mandir}/man1/*
@@ -76,4 +76,5 @@ make test
 
 * Mon Dec 08 2008 cpan2dist 2.0-1mdv
 - initial mdv release, generated with cpan2dist
+
 
